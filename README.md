@@ -174,7 +174,7 @@ samples/<exp_name>_<train_steps>_cfg<cfg>-<guidance_low>-<guidance_high>-labelsa
 
 ## Evaluation
 
-Use the standalone FID script with a generated image folder and a precomputed FID statistics file.
+Use the standalone FID script with a generated image folder and a precomputed FID statistics file, The imagenet-256 model weights and FID statistics file can be downloaded from the Hugginface link (see data preparation).
 
 For ImageNet 256x256, this repository includes:
 
