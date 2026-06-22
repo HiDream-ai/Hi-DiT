@@ -44,6 +44,9 @@ conda activate hidit
 
 The ImageNet training pipeline expects preprocessed HDF5 images and cached VAE latents.
 
+### Download model weights
+Before training the model, please download the weights for VAE and the weights for the pre-trained ImageNet model (optional) from the link: https://huggingface.co/shenhen/Hi-DiT.
+
 ### 1. Convert ImageNet Images to HDF5
 
 ```bash
