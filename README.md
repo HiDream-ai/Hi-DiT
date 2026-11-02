@@ -94,7 +94,7 @@ The pixel branch is disabled and the model is optimized with latent denoising an
 ```bash
 accelerate launch --num_machines=1 --num_processes=8 train.py \
     --ldm-only \
-    --max-train-steps 400000 \
+    --max-train-steps 4000000 \
     --report-to wandb \
     --allow-tf32 \
     --mixed-precision fp16 \
@@ -153,7 +153,7 @@ accelerate launch --num_machines=1 --num_processes=8 train.py \
 ```bash
 torchrun --nnodes=1 --nproc_per_node=8 generate.py \
     --exp-path exps/hidit-imagenet256-stage2-pixel \
-    --train-steps 450000 \
+    --train-steps 4020000 \
     --sample-dir samples \
     --num-fid-samples 50000 \
     --pproc-batch-size 32 \
@@ -186,7 +186,7 @@ Evaluate a generated folder:
 
 ```bash
 python calculate_fid.py \
-    --input-dir samples/hidit-imagenet256-stage2-pixel_0450000_cfg2.4-0.0-1.0-labelsampling-equal \
+    --input-dir samples/hidit-imagenet256-stage2-pixel_4020000_cfg2.4-0.0-1.0-labelsampling-equal \
     --fid-stats imagenet_in256_stats.npz \
     --device cuda \
     --output-json results/hidit_imagenet256_450k_metrics.json
